@@ -34,55 +34,57 @@ export default async function ProgramDetail({ params }: { params: Promise<{ loca
       </section>
 
       {/* Curriculum Timeline/Grid */}
-      <section className="py-24 max-w-screen-2xl mx-auto px-4 sm:px-8 lg:px-16 bg-white w-full">
-        <div className="mb-16">
-          <h2 className="text-3xl font-extrabold text-slate-900">Program Curriculum</h2>
-        </div>
-        <div className="space-y-16">
-          {(programData.curriculum as any[]).map((year, yIdx) => {
-            const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
-            const sem1Label = locale === 'km' ? `ឆមាសទី ${yIdx * 2 + 1}` : `Semester ${romanNumerals[yIdx * 2]}`;
-            const sem2Label = locale === 'km' ? `ឆមាសទី ${yIdx * 2 + 2}` : `Semester ${romanNumerals[yIdx * 2 + 1]}`;
-            const programPrefix = programId.toUpperCase().slice(0, 3);
-            
-            return (
-              <div key={yIdx} className="grid md:grid-cols-2 gap-x-16 gap-y-12">
-                
-                {/* Semester 1 Column */}
-                <div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-4">{sem1Label}</h4>
-                  <ul className="space-y-0 border-t border-slate-100">
-                    {year.sem1.split(', ').map((course: string, cIdx: number) => (
-                      <li key={cIdx} className="flex items-center justify-between py-4 border-b border-slate-100 group cursor-pointer hover:bg-slate-50 transition-colors">
-                        <div className="flex items-center gap-6">
-                          <span className="font-bold text-amber-500 w-20 shrink-0">{programPrefix} {yIdx + 1}0{cIdx + 1}</span>
-                          <span className="text-slate-600 font-medium">{course}</span>
-                        </div>
-                        <svg className="w-5 h-5 text-amber-500 opacity-50 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+      <section className="py-24 bg-white w-full border-t border-slate-100">
+        <div className="max-w-[90rem] mx-auto px-4 sm:px-8 lg:px-16">
+          <div className="mb-16">
+            <h2 className="text-3xl font-extrabold text-slate-900">Program Curriculum</h2>
+          </div>
+          <div className="space-y-16">
+            {(programData.curriculum as any[]).map((year, yIdx) => {
+              const romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+              const sem1Label = locale === 'km' ? `ឆមាសទី ${yIdx * 2 + 1}` : `Semester ${romanNumerals[yIdx * 2]}`;
+              const sem2Label = locale === 'km' ? `ឆមាសទី ${yIdx * 2 + 2}` : `Semester ${romanNumerals[yIdx * 2 + 1]}`;
+              const programPrefix = programId.toUpperCase().slice(0, 3);
+              
+              return (
+                <div key={yIdx} className="grid md:grid-cols-2 gap-x-20 gap-y-12">
+                  
+                  {/* Semester 1 Column */}
+                  <div>
+                    <h4 className="text-xl font-bold text-slate-900 mb-4">{sem1Label}</h4>
+                    <ul className="space-y-0 border-t border-slate-100">
+                      {year.sem1.split(', ').map((course: string, cIdx: number) => (
+                        <li key={cIdx} className="flex items-center justify-between py-4 border-b border-slate-100 group cursor-pointer hover:bg-slate-50 transition-colors">
+                          <div className="flex items-center gap-6">
+                            <span className="font-bold text-amber-500 w-20 shrink-0">{programPrefix} {yIdx + 1}0{cIdx + 1}</span>
+                            <span className="text-slate-600 font-medium">{course}</span>
+                          </div>
+                          <svg className="w-5 h-5 text-amber-500 opacity-50 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                {/* Semester 2 Column */}
-                <div>
-                  <h4 className="text-xl font-bold text-slate-900 mb-4">{sem2Label}</h4>
-                  <ul className="space-y-0 border-t border-slate-100">
-                    {year.sem2.split(', ').map((course: string, cIdx: number) => (
-                      <li key={cIdx} className="flex items-center justify-between py-4 border-b border-slate-100 group cursor-pointer hover:bg-slate-50 transition-colors">
-                        <div className="flex items-center gap-6">
-                          <span className="font-bold text-amber-500 w-20 shrink-0">{programPrefix} {yIdx + 1}1{cIdx + 1}</span>
-                          <span className="text-slate-600 font-medium">{course}</span>
-                        </div>
-                        <svg className="w-5 h-5 text-amber-500 opacity-50 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  {/* Semester 2 Column */}
+                  <div>
+                    <h4 className="text-xl font-bold text-slate-900 mb-4">{sem2Label}</h4>
+                    <ul className="space-y-0 border-t border-slate-100">
+                      {year.sem2.split(', ').map((course: string, cIdx: number) => (
+                        <li key={cIdx} className="flex items-center justify-between py-4 border-b border-slate-100 group cursor-pointer hover:bg-slate-50 transition-colors">
+                          <div className="flex items-center gap-6">
+                            <span className="font-bold text-amber-500 w-20 shrink-0">{programPrefix} {yIdx + 1}1{cIdx + 1}</span>
+                            <span className="text-slate-600 font-medium">{course}</span>
+                          </div>
+                          <svg className="w-5 h-5 text-amber-500 opacity-50 group-hover:opacity-100 transition-opacity shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-              </div>
-            );
-          })}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
     </main>

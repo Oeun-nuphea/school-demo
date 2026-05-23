@@ -22,38 +22,53 @@ export default async function Alumni({ params }: { params: Promise<{ locale: 'en
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+      {/* Success Stories Marquee */}
+      <section className="py-24 bg-white overflow-hidden">
+        <h2 className="text-3xl font-bold text-slate-900 mb-16 text-center">
           {dict.alumni.listTitle}
         </h2>
-        <div className="grid md:grid-cols-3 gap-10">
-          {[
-            { data: dict.alumni.items.chheng, img: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-            { data: dict.alumni.items.sophea, img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-            { data: dict.alumni.items.virak, img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          ].map((alum, idx) => (
-            <div key={idx} className="bg-white rounded-3xl p-8 shadow-lg shadow-slate-200/50 border border-slate-100 flex flex-col h-full">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 ring-4 ring-slate-50">
-                  <Image
-                    src={alum.img}
-                    alt={alum.data.name}
-                    fill
-                    sizes="64px"
-                    className="object-cover"
-                  />
+        
+        <div className="flex flex-col gap-8 w-full relative">
+          {/* Left fading edge */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          {/* Right fading edge */}
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+          {/* Row 1: Scrolling Left */}
+          <div className="flex animate-marquee">
+            {[...Object.entries(dict.alumni.items).slice(0, 4), ...Object.entries(dict.alumni.items).slice(0, 4)].map(([key, data], idx) => (
+              <div key={idx} className="bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-col w-[450px] shrink-0 mx-4">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 ring-4 ring-white">
+                    <Image src={`https://i.pravatar.cc/150?u=${key}`} alt={data.name} fill sizes="64px" className="object-cover" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900">{data.name}</h3>
+                    <p className="text-blue-600 font-semibold text-sm">{data.role}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900">{alum.data.name}</h3>
-                  <p className="text-blue-600 font-semibold text-sm">{alum.data.role}</p>
-                </div>
+                <p className="text-slate-600 leading-relaxed italic">"{data.desc}"</p>
               </div>
-              <p className="text-slate-600 leading-relaxed flex-grow italic">
-                "{alum.data.desc}"
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Row 2: Scrolling Right */}
+          <div className="flex animate-marquee-reverse">
+            {[...Object.entries(dict.alumni.items).slice(4, 8), ...Object.entries(dict.alumni.items).slice(4, 8)].map(([key, data], idx) => (
+              <div key={idx} className="bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-col w-[450px] shrink-0 mx-4">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 ring-4 ring-white">
+                    <Image src={`https://i.pravatar.cc/150?u=${key}`} alt={data.name} fill sizes="64px" className="object-cover" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900">{data.name}</h3>
+                    <p className="text-indigo-600 font-semibold text-sm">{data.role}</p>
+                  </div>
+                </div>
+                <p className="text-slate-600 leading-relaxed italic">"{data.desc}"</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main>

@@ -177,9 +177,14 @@
     "headerSubtitle": "Join a global network of over 10,000 successful graduates shaping the future of technology and business worldwide.",
     "listTitle": "Success Stories",
     "items": {
-      "chheng": { "name": "Chheng Rattana", "role": "CTO at TechCambodia", "desc": "Graduated in 2018. Led the development of the nation's largest e-commerce platform." },
-      "sophea": { "name": "Sophea Lin", "role": "Senior Data Scientist, Amazon", "desc": "Graduated in 2020. Currently working on global supply chain optimization algorithms in Seattle." },
-      "virak": { "name": "Virak Seng", "role": "Founder, CyberKh", "desc": "Graduated in 2015. Founded the top cybersecurity firm in the region, protecting leading financial institutions." }
+      "chheng": { "name": "Chheng Sokleap", "role": "Software Engineer at Google", "desc": "The rigorous computer science curriculum prepared me for the challenges of global tech. I use the problem-solving skills I learned every single day." },
+      "sophea": { "name": "Sophea Rath", "role": "Lead Data Scientist at Grab", "desc": "From my very first statistics class to my capstone project in AI, the faculty challenged me to think deeply. I am proud to be part of this community." },
+      "virak": { "name": "Virak Chea", "role": "Founder, TechStart Asia", "desc": "The entrepreneurial ecosystem and networking opportunities at the university were the springboard for my startup's success. Truly life-changing." },
+      "sokha": { "name": "Sokha Pen", "role": "Senior UX Designer at Microsoft", "desc": "The perfect blend of technical rigor and design thinking. The skills I gained here are the foundation of my career in human-computer interaction." },
+      "minea": { "name": "Minea Oum", "role": "Cybersecurity Analyst at Bank of America", "desc": "The hands-on labs and real-world scenarios were exactly what I needed. I stepped into my first job feeling completely prepared for enterprise security." },
+      "dara": { "name": "Dara Kim", "role": "Product Manager at Amazon", "desc": "Learning to bridge the gap between engineering and business strategy was incredible. The professors here truly understand industry demands." },
+      "nita": { "name": "Nita Meas", "role": "AI Researcher at OpenAI", "desc": "The depth of the machine learning curriculum is world-class. It gave me the mathematical foundation and practical coding skills to succeed globally." },
+      "piseth": { "name": "Piseth Vong", "role": "CTO at Wing Bank", "desc": "Leadership and technical architecture were taught side-by-side. I recommend this institution to anyone serious about a long-term career in tech." }
     }
   }
 }
