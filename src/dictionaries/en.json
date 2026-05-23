@@ -97,11 +97,49 @@
     "headerSubtitle": "Explore our comprehensive range of undergraduate and graduate programs designed to prepare you for the future of work.",
     "bachelorsTitle": "Bachelor's Degrees",
     "mastersTitle": "Master's Degrees",
+    "semester1": "Semester 1",
+    "semester2": "Semester 2",
     "items": {
-      "cs": { "title": "Computer Science", "desc": "A rigorous program covering algorithms, systems architecture, and artificial intelligence." },
-      "se": { "title": "Software Engineering", "desc": "Focus on modern web and mobile application development, cloud computing, and DevOps." },
-      "cyber": { "title": "Cybersecurity", "desc": "Learn network defense, ethical hacking, and secure application development." },
-      "ds": { "title": "Data Science & AI", "desc": "Master machine learning, big data analytics, and predictive modeling." },
+      "cs": {
+        "title": "Computer Science",
+        "desc": "A rigorous program covering algorithms, systems architecture, and artificial intelligence.",
+        "curriculum": [
+          { "year": "Year 1", "sem1": "Intro to Programming, Calculus I, Physics", "sem2": "Data Structures, Calculus II, Digital Logic" },
+          { "year": "Year 2", "sem1": "OOP, Discrete Math, Database Systems", "sem2": "Algorithms, Operating Systems, Web Dev" },
+          { "year": "Year 3", "sem1": "Software Engineering, Computer Networks, AI", "sem2": "Machine Learning, Cloud Computing, Cryptography" },
+          { "year": "Year 4", "sem1": "Capstone Project I, Big Data, Tech Elective", "sem2": "Capstone Project II, Internship, Tech Elective" }
+        ]
+      },
+      "se": {
+        "title": "Software Engineering",
+        "desc": "Focus on modern web and mobile application development, cloud computing, and DevOps.",
+        "curriculum": [
+          { "year": "Year 1", "sem1": "Intro to Programming, Discrete Math, UX Design", "sem2": "Data Structures, Requirements Engineering, DB Systems" },
+          { "year": "Year 2", "sem1": "OOP, Systems Analysis, Web Dev", "sem2": "Advanced Web Dev, Mobile App Dev, QA & Testing" },
+          { "year": "Year 3", "sem1": "Software Architecture, DevOps, Cloud Computing", "sem2": "Agile Methodologies, Secure Coding, API Design" },
+          { "year": "Year 4", "sem1": "Capstone Project I, Microservices, Tech Elective", "sem2": "Capstone Project II, Internship, Tech Elective" }
+        ]
+      },
+      "cyber": {
+        "title": "Cybersecurity",
+        "desc": "Learn network defense, ethical hacking, and secure application development.",
+        "curriculum": [
+          { "year": "Year 1", "sem1": "Intro to Programming, IT Fundamentals, Calculus", "sem2": "Data Structures, Operating Systems, Network Basics" },
+          { "year": "Year 2", "sem1": "OOP, Cryptography, Database Systems", "sem2": "Ethical Hacking, Network Security, Linux Administration" },
+          { "year": "Year 3", "sem1": "Digital Forensics, Security Policies, Cloud Security", "sem2": "Malware Analysis, Incident Response, Secure Coding" },
+          { "year": "Year 4", "sem1": "Capstone Project I, Pen Testing, Tech Elective", "sem2": "Capstone Project II, Internship, Tech Elective" }
+        ]
+      },
+      "ds": {
+        "title": "Data Science & AI",
+        "desc": "Master machine learning, big data analytics, and predictive modeling.",
+        "curriculum": [
+          { "year": "Year 1", "sem1": "Intro to Programming, Statistics I, Linear Algebra", "sem2": "Data Structures, Statistics II, Data Visualization" },
+          { "year": "Year 2", "sem1": "Python for Data Science, DB Systems, Calculus", "sem2": "Machine Learning Fundamentals, Data Mining, R Programming" },
+          { "year": "Year 3", "sem1": "Deep Learning, Big Data Tech, Cloud Computing", "sem2": "NLP, Time Series Analysis, AI Ethics" },
+          { "year": "Year 4", "sem1": "Capstone Project I, Advanced AI, Tech Elective", "sem2": "Capstone Project II, Internship, Tech Elective" }
+        ]
+      },
       "mba": { "title": "MBA in Tech Management", "desc": "Blend business leadership with technology strategy for modern enterprises." },
       "mit": { "title": "Master of Information Technology", "desc": "Advanced study in enterprise systems, IT project management, and cybersecurity." }
     }

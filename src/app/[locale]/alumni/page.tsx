@@ -40,6 +40,7 @@ export default async function Alumni({ params }: { params: Promise<{ locale: 'en
                     src={alum.img}
                     alt={alum.data.name}
                     fill
+                    sizes="64px"
                     className="object-cover"
                   />
                 </div>

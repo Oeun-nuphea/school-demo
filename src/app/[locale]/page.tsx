@@ -56,9 +56,9 @@ export default async function Home({ params }: { params: Promise<{ locale: 'en' 
       </section>
 
       {/* Quick Stats */}
-      <section className="relative -mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100 ">
+      <section className="relative -mt-16 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-3xl shadow-2xl shadow-blue-900/5 border border-slate-100 p-10 md:p-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 divide-x divide-slate-100">
             {[
               { label: dict.home.stats.students, value: "15,000+" },
               { label: dict.home.stats.faculty, value: "800+" },
@@ -69,10 +69,10 @@ export default async function Home({ params }: { params: Promise<{ locale: 'en' 
                 key={i}
                 className={`flex flex-col items-center justify-center ${i === 0 ? "pl-0" : ""} ${i === 3 ? "pr-0" : ""}`}
               >
-                <span className="text-3xl font-bold text-slate-900 mb-1">
+                <span className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-2">
                   {stat.value}
                 </span>
-                <span className="text-sm text-slate-500 font-medium">
+                <span className="text-sm md:text-base text-slate-500 font-bold uppercase tracking-wider text-center">
                   {stat.label}
                 </span>
               </div>
