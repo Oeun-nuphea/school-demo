@@ -4,17 +4,20 @@ export default function About() {
     <main className="flex min-h-screen flex-col bg-slate-50 font-sans">
       {" "}
       {/* Page Header */}{" "}
-      <section className="bg-blue-600 pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-center border-b border-blue-700 ">
-        {" "}
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          About Asian Institute of Cambodia
-        </h1>{" "}
-        <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-          {" "}
-          Founded with a vision to lead the future of education, Asian Institute
-          of Cambodia is dedicated to academic excellence, innovation, and
-          global impact.{" "}
-        </p>{" "}
+      <section className="relative bg-slate-950 pt-36 pb-24 px-4 sm:px-6 lg:px-8 text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        <div className="relative z-10">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+            About Asian Institute of Cambodia
+          </h1>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            Founded with a vision to lead the future of education, Asian Institute
+            of Cambodia is dedicated to academic excellence, innovation, and
+            global impact.
+          </p>
+        </div>
       </section>{" "}
       {/* History & Vision */}{" "}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
