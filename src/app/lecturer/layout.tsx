@@ -4,7 +4,7 @@ export default function LecturerLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen bg-slate-100 flex mt-20">
+    <div className="min-h-screen bg-slate-100 flex pt-28">
       {/* Sidebar Navigation */}
       <aside className="w-64 bg-white border-r border-slate-200 hidden md:block fixed h-[calc(100vh-80px)] overflow-y-auto z-40">
         <div className="p-6">
