@@ -5,9 +5,18 @@ const locales = ["en", "km"];
 const defaultLocale = "en";
 
 export function middleware(request: NextRequest) {
-  // Temporary: Disabling the auto-redirect until the user creates the [locale] folder
-  // so the site doesn't 404 in the meantime.
-  return NextResponse.next();
+  const { pathname } = request.nextUrl;
+
+  // Check if there is any supported locale in the pathname
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  if (pathnameHasLocale) return;
+
+  // Redirect if there is no locale
+  request.nextUrl.pathname = `/${defaultLocale}${pathname}`;
+  return NextResponse.redirect(request.nextUrl);
 }
 
 export const config = {

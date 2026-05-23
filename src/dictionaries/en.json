@@ -7,5 +7,135 @@
     "alumni": "Alumni",
     "contact": "Contact",
     "apply": "Apply Now"
+  },
+  "home": {
+    "hero": {
+      "badge": "2026 Admissions Now Open",
+      "title": "Shape Your Future at",
+      "titleHighlight": "Asian Institute of Cambodia",
+      "subtitle": "Empowering the next generation of innovators, engineers, and leaders. Experience world-class education with cutting-edge facilities and industry-aligned programs.",
+      "btnExplore": "Explore Programs",
+      "btnDiscover": "Discover Asian Institute of Cambodia"
+    },
+    "stats": {
+      "students": "Active Students",
+      "faculty": "Expert Faculty",
+      "programs": "Degree Programs",
+      "partners": "Global Partners"
+    },
+    "programs": {
+      "badge": "Academics",
+      "title": "Featured Programs",
+      "subtitle": "Discover majors designed for the future. Our curriculum is constantly updated to meet the demands of the modern workforce.",
+      "items": {
+        "software": {
+          "faculty": "Faculty of IT",
+          "title": "Software Engineering",
+          "desc": "Master full-stack development, cloud architecture, and modern software design principles."
+        },
+        "ai": {
+          "faculty": "Faculty of IT",
+          "title": "Artificial Intelligence",
+          "desc": "Dive deep into machine learning, neural networks, and natural language processing."
+        },
+        "cyber": {
+          "faculty": "Faculty of IT",
+          "title": "Cybersecurity",
+          "desc": "Learn to defend networks, secure applications, and understand ethical hacking."
+        }
+      },
+      "viewCurriculum": "View Curriculum",
+      "viewAll": "View All 120+ Programs"
+    },
+    "scholarships": {
+      "badge": "Financial Aid",
+      "title": "Invest in Your Future",
+      "subtitle": "We believe that world-class education should be accessible. Asian Institute of Cambodia offers over $5M in scholarships annually to outstanding and deserving students worldwide.",
+      "apply": "Apply for Scholarships",
+      "items": {
+        "merit": "Merit-Based Excellence Scholarship",
+        "women": "Women in Tech Initiative",
+        "global": "Global Innovator Grant"
+      },
+      "quote": "\"Life-changing opportunity\"",
+      "author": "Sarah J., Class of 2025"
+    }
+  },
+  "about": {
+    "headerTitle": "About Asian Institute of Cambodia",
+    "headerSubtitle": "Founded with a vision to lead the future of education, Asian Institute of Cambodia is dedicated to academic excellence, innovation, and global impact.",
+    "historyBadge": "Our History",
+    "historyTitle": "A Legacy of Excellence",
+    "historyP1": "Established in 1995, Asian Institute of Cambodia University began as a small institute for computer sciences. Today, we are a multidisciplinary powerhouse recognized globally for our rigorous curriculum and groundbreaking research.",
+    "historyP2": "Our vision is to empower individuals to become creative problem solvers and leaders who can navigate and shape the complexities of the modern world.",
+    "valuesTitle": "Institutional Values",
+    "values": {
+      "innovation": { "title": "Innovation", "desc": "Pushing the boundaries of knowledge through research." },
+      "integrity": { "title": "Integrity", "desc": "Upholding the highest ethical standards in academia." },
+      "inclusivity": { "title": "Inclusivity", "desc": "Fostering a diverse and welcoming community." }
+    }
+  },
+  "footer": {
+    "desc": "Asian Institute of Cambodia. Empowering minds, shaping the future. A premier institute for technology, business, and innovation.",
+    "academics": "Academics",
+    "undergrad": "Undergraduate",
+    "grad": "Graduate Programs",
+    "short": "Short Courses",
+    "institute": "Institute",
+    "about": "About Us",
+    "admissions": "Admissions",
+    "scholarships": "Scholarships",
+    "news": "News & Events",
+    "contact": "Contact Us",
+    "address": "Phnom Penh, Cambodia",
+    "rights": "Asian Institute of Cambodia. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "programs": {
+    "headerTitle": "Academic Programs",
+    "headerSubtitle": "Explore our comprehensive range of undergraduate and graduate programs designed to prepare you for the future of work.",
+    "bachelorsTitle": "Bachelor's Degrees",
+    "mastersTitle": "Master's Degrees",
+    "items": {
+      "cs": { "title": "Computer Science", "desc": "A rigorous program covering algorithms, systems architecture, and artificial intelligence." },
+      "se": { "title": "Software Engineering", "desc": "Focus on modern web and mobile application development, cloud computing, and DevOps." },
+      "cyber": { "title": "Cybersecurity", "desc": "Learn network defense, ethical hacking, and secure application development." },
+      "ds": { "title": "Data Science & AI", "desc": "Master machine learning, big data analytics, and predictive modeling." },
+      "mba": { "title": "MBA in Tech Management", "desc": "Blend business leadership with technology strategy for modern enterprises." },
+      "mit": { "title": "Master of Information Technology", "desc": "Advanced study in enterprise systems, IT project management, and cybersecurity." }
+    }
+  },
+  "scholarships": {
+    "headerTitle": "Scholarships & Financial Aid",
+    "headerSubtitle": "We are committed to making world-class education accessible. Explore our range of merit and need-based scholarships.",
+    "applyNow": "Apply for Scholarships",
+    "deadline": "Application Deadline: August 15, 2026",
+    "items": {
+      "merit": { "title": "Presidential Merit Scholarship", "amount": "100% Tuition Coverage", "desc": "Awarded to top-tier applicants with exceptional academic records and leadership potential." },
+      "women": { "title": "Women in Technology Grant", "amount": "50% Tuition + $2,000 Stipend", "desc": "Designed to support and encourage outstanding female students pursuing STEM degrees." },
+      "innovator": { "title": "Global Innovator Award", "amount": "$5,000 per Year", "desc": "For students who have demonstrated remarkable innovative thinking or created impactful projects." },
+      "need": { "title": "Need-Based Opportunity Grant", "amount": "Up to 80% Tuition", "desc": "Financial assistance for brilliant students from disadvantaged backgrounds to ensure equal opportunity." }
+    }
+  },
+  "faculty": {
+    "headerTitle": "World-Class Faculty",
+    "headerSubtitle": "Learn from industry experts, leading researchers, and passionate educators dedicated to your success.",
+    "listTitle": "Meet Our Lecturers & Researchers",
+    "items": {
+      "drChen": { "name": "Dr. Sarah Chen", "role": "Head of AI Research", "desc": "Former Senior AI Researcher at Google. Specializes in Neural Networks and Ethics in AI." },
+      "profSok": { "name": "Prof. Sok Visal", "role": "Dean of Software Engineering", "desc": "20+ years of enterprise software architecture experience. Passionate about DevOps and Scalable Systems." },
+      "drPatel": { "name": "Dr. Rajesh Patel", "role": "Cybersecurity Lead", "desc": "Certified Ethical Hacker and former cybersecurity consultant for top-tier financial institutions." }
+    }
+  },
+  "alumni": {
+    "headerTitle": "Alumni Network",
+    "headerSubtitle": "Join a global network of over 10,000 successful graduates shaping the future of technology and business worldwide.",
+    "listTitle": "Success Stories",
+    "items": {
+      "chheng": { "name": "Chheng Rattana", "role": "CTO at TechCambodia", "desc": "Graduated in 2018. Led the development of the nation's largest e-commerce platform." },
+      "sophea": { "name": "Sophea Lin", "role": "Senior Data Scientist, Amazon", "desc": "Graduated in 2020. Currently working on global supply chain optimization algorithms in Seattle." },
+      "virak": { "name": "Virak Seng", "role": "Founder, CyberKh", "desc": "Graduated in 2015. Founded the top cybersecurity firm in the region, protecting leading financial institutions." }
+    }
   }
 }

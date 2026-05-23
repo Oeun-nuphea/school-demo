@@ -1,2 +1,60 @@
-export default function Alumni() { const alumni = [ { name: "Sarah Jenkins", year: "2022", role: "Software Engineer at Google", quote: "Asian Institute of Cambodia gave me the hands-on experience I needed to succeed at a FAANG company." }, { name: "Michael Chang", year: "2020", role: "Cybersecurity Analyst at IBM", quote: "The rigorous curriculum and supportive faculty shaped my career." }, { name: "Elena Rodriguez", year: "2023", role: "AI Researcher at OpenAI", quote: "The undergraduate research opportunities here are unparalleled." } ]; return ( <main className="flex min-h-screen flex-col bg-slate-50 font-sans"> <section className="bg-blue-600 pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-center border-b border-blue-700 "> <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Alumni & Success Stories</h1> <p className="text-blue-100 text-lg max-w-2xl mx-auto"> Discover where a degree from Asian Institute of Cambodia can take you. </p> </section> <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full"> <div className="grid md:grid-cols-3 gap-8"> {alumni.map((alum, idx) => ( <div key={idx} className="bg-white border border-slate-200 rounded-3xl p-8 hover:shadow-xl transition-shadow relative"> <div className="absolute top-6 right-6 text-blue-100 "> <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg> </div> <p className="text-slate-700 italic mb-8 relative z-10">"{alum.quote}"</p> <div className="flex items-center gap-4"> <div className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-slate-400"> <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" /></svg> </div> <div> <h4 className="font-bold text-slate-900 ">{alum.name}</h4> <p className="text-xs text-blue-600 ">{alum.role}</p> <p className="text-xs text-slate-500 ">Class of {alum.year}</p> </div> </div> </div> ))} </div> </section> </main> );
+import { getDictionary } from "@/dictionaries/getDictionary";
+import Image from "next/image";
+
+export default async function Alumni({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
+
+  return (
+    <main className="flex min-h-screen flex-col bg-slate-50 font-sans">
+      {/* Sleek Dark Header */}
+      <section className="relative bg-slate-950 pt-36 pb-24 px-4 sm:px-6 lg:px-8 text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        <div className="relative z-10">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+            {dict.alumni.headerTitle}
+          </h1>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            {dict.alumni.headerSubtitle}
+          </p>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+          {dict.alumni.listTitle}
+        </h2>
+        <div className="grid md:grid-cols-3 gap-10">
+          {[
+            { data: dict.alumni.items.chheng, img: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+            { data: dict.alumni.items.sophea, img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+            { data: dict.alumni.items.virak, img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
+          ].map((alum, idx) => (
+            <div key={idx} className="bg-white rounded-3xl p-8 shadow-lg shadow-slate-200/50 border border-slate-100 flex flex-col h-full">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 ring-4 ring-slate-50">
+                  <Image
+                    src={alum.img}
+                    alt={alum.data.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">{alum.data.name}</h3>
+                  <p className="text-blue-600 font-semibold text-sm">{alum.data.role}</p>
+                </div>
+              </div>
+              <p className="text-slate-600 leading-relaxed flex-grow italic">
+                "{alum.data.desc}"
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 }

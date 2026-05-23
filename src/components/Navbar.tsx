@@ -71,13 +71,29 @@ export default function Navbar() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center justify-center w-8 h-8 rounded-full border border-slate-200 text-xs font-bold text-slate-600 hover:text-blue-600 hover:border-blue-600 transition-colors"
-              title="Switch Language"
-            >
-              {locale === "en" ? "KH" : "EN"}
-            </button>
+            {/* inside your nav-links flex row */}
+<div className="flex items-center border-l border-slate-200 pl-2.5 ml-1 gap-0.5">
+  <button
+    onClick={() => locale !== "en" && toggleLanguage()}
+    className={`px-2.5 py-1 text-xs font-medium tracking-wide rounded-full transition-colors ${
+      locale === "en"
+        ? "text-slate-900 bg-black/[0.06]"
+        : "text-slate-400 hover:text-slate-600"
+    }`}
+  >
+    EN
+  </button>
+  <button
+    onClick={() => locale !== "km" && toggleLanguage()}
+    className={`px-2.5 py-1 text-xs font-medium rounded-full transition-colors ${
+      locale === "km"
+        ? "text-slate-900 bg-black/[0.06]"
+        : "text-slate-400 hover:text-slate-600"
+    }`}
+  >
+    ខ្មែរ
+  </button>
+</div>
             <Link
               href={`/${locale}/contact`}
               className={`hidden lg:block px-4 py-1.5 text-sm font-medium rounded-full transition-colors ${

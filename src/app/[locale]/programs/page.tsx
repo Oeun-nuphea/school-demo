@@ -1,2 +1,70 @@
-import Link from "next/link"; export default function Programs() { const faculties = [ { name: "Faculty of Information Technology", majors: [ { name: "Software Engineering", type: "Bachelor", duration: "4 Years" }, { name: "Cybersecurity", type: "Bachelor", duration: "4 Years" }, { name: "Artificial Intelligence", type: "Master", duration: "2 Years" } ] }, { name: "Faculty of Business Administration", majors: [ { name: "International Business", type: "Bachelor", duration: "4 Years" }, { name: "FinTech & Banking", type: "Bachelor", duration: "4 Years" }, { name: "Digital Marketing", type: "Short Course", duration: "6 Months" } ] } ]; return ( <main className="flex min-h-screen flex-col bg-slate-50 font-sans"> <section className="bg-blue-600 pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-center border-b border-blue-700 "> <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Programs & Majors</h1> <p className="text-blue-100 text-lg max-w-2xl mx-auto"> Explore our wide range of academic degrees designed to equip you with the skills of tomorrow. </p> </section> <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full"> <div className="space-y-16"> {faculties.map((faculty, fIdx) => ( <div key={fIdx}> <h2 className="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-4"> {faculty.name} </h2> <div className="grid md:grid-cols-3 gap-6"> {faculty.majors.map((major, mIdx) => ( <div key={mIdx} className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"> <div className="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">{major.type}</div> <h3 className="text-xl font-bold text-slate-900 mb-4">{major.name}</h3> <div className="flex justify-between items-center text-sm text-slate-500 mb-6"> <span className="flex items-center gap-1"> <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> {major.duration} </span> </div> <Link href="/admissions" className="block w-full text-center py-2 bg-slate-100 hover:bg-slate-200 text-slate-900 rounded-lg font-medium transition-colors"> Apply Now </Link> </div> ))} </div> </div> ))} </div> </section> </main> );
+import { getDictionary } from "@/dictionaries/getDictionary";
+
+export default async function Programs({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
+
+  return (
+    <main className="flex min-h-screen flex-col bg-slate-50 font-sans">
+      
+      {/* Sleek Dark Header */}
+      <section className="relative bg-slate-950 pt-36 pb-24 px-4 sm:px-6 lg:px-8 text-center overflow-hidden border-b border-slate-800">
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        <div className="relative z-10">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
+            {dict.programs.headerTitle}
+          </h1>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            {dict.programs.headerSubtitle}
+          </p>
+        </div>
+      </section>
+
+      {/* Bachelor's Degrees */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+          {dict.programs.bachelorsTitle}
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { key: 'cs', data: dict.programs.items.cs },
+            { key: 'se', data: dict.programs.items.se },
+            { key: 'cyber', data: dict.programs.items.cyber },
+            { key: 'ds', data: dict.programs.items.ds },
+          ].map((program, idx) => (
+            <div key={idx} className="bg-white border border-slate-200 rounded-3xl p-8 hover:shadow-xl hover:shadow-blue-500/5 transition-all hover:-translate-y-1">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">{program.data.title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">{program.data.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Master's Degrees */}
+      <section className="py-24 bg-white border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+            {dict.programs.mastersTitle}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              { key: 'mba', data: dict.programs.items.mba },
+              { key: 'mit', data: dict.programs.items.mit },
+            ].map((program, idx) => (
+              <div key={idx} className="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:shadow-xl transition-all">
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">{program.data.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{program.data.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+    </main>
+  );
 }
