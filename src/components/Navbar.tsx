@@ -16,46 +16,58 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-4 inset-x-0 w-[96%] max-w-7xl mx-auto z-50 bg-white/75 backdrop-blur-xl border border-white/50 shadow-xl shadow-blue-900/5 rounded-2xl transition-all duration-300">
-      <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50 bg-white/70 backdrop-blur-lg border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-full transition-all duration-300">
+      <div className="px-5 sm:px-6">
+        <div className="flex justify-between items-center h-14">
+          
+          {/* Logo Section */}
           <Link href="/" className="flex-shrink-0 flex items-center gap-3 group">
-            <Image src="/logo.png" alt="Academic Excellence Logo" width={44} height={44} className="w-auto h-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300" />
+            <Image src="/logo-transparent.png" alt="Academic Excellence Logo" width={44} height={44} className="w-auto h-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300" />
             <span className="font-extrabold text-xl tracking-tight hidden sm:block bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-600">A.E.I</span>
           </Link>
           
-          <div className="hidden md:flex items-center bg-slate-100/80 p-1.5 rounded-xl border border-slate-200/60 shadow-inner gap-1">
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href || pathname?.startsWith(link.href + '/');
               return (
                 <Link 
                   key={link.name}
                   href={link.href} 
-                  className={`px-4 py-1.5 text-sm font-bold rounded-lg transition-all duration-200 ${
+                  className={`text-sm font-medium transition-colors relative py-1 ${
                     isActive 
-                      ? "text-blue-700 bg-white shadow ring-1 ring-slate-900/5" 
-                      : "text-slate-500 hover:text-slate-900 hover:bg-white/50"
+                      ? "text-slate-900" 
+                      : "text-slate-500 hover:text-slate-900"
                   }`}
                 >
                   {link.name}
+                  {/* Subtle active indicator dot */}
+                  {isActive && (
+                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-slate-900 rounded-full" />
+                  )}
                 </Link>
               );
             })}
           </div>
 
-          <div className="flex items-center gap-4">
+          {/* Action Buttons */}
+          <div className="flex items-center gap-5">
             <Link 
               href="/contact" 
-              className={`hidden lg:block text-sm font-bold transition-colors ${
-                pathname === '/contact' ? 'text-blue-700' : 'text-slate-500 hover:text-slate-900'
+              className={`hidden lg:block text-sm font-medium transition-colors ${
+                pathname === '/contact' ? 'text-slate-900' : 'text-slate-500 hover:text-slate-900'
               }`}
             >
               Contact
             </Link>
-            <Link href="/admissions" className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-bold rounded-xl shadow-md hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all duration-300">
+            <Link 
+              href="/admissions" 
+              className="px-5 py-2 bg-slate-900 text-white text-sm font-medium rounded-full shadow-sm hover:bg-slate-800 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+            >
               Apply Now
             </Link>
           </div>
+          
         </div>
       </div>
     </nav>
