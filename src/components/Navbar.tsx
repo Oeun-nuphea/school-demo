@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex-shrink-0 flex items-center gap-3 group">
-            <Image src="/logo.png" alt="Academic Excellence Logo" width={44} height={44} className="object-contain h-11 w-auto drop-shadow-sm group-hover:scale-105 transition-transform duration-300" />
+            <Image src="/logo.png" alt="Academic Excellence Logo" width={44} height={44} className="w-auto h-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform duration-300" />
             <span className="font-extrabold text-xl tracking-tight hidden sm:block bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-600">A.E.I</span>
           </Link>
           
