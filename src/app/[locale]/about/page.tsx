@@ -52,6 +52,40 @@ export default async function About({ params }: { params: Promise<{ locale: 'en'
           </div>
         </div>
       </section>
+
+      {/* Founder Section */}
+      <section className="py-24 bg-slate-900 border-y border-slate-800 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-slate-800 order-2 md:order-1">
+              <Image
+                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Founder"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="text-sm font-bold text-blue-400 uppercase tracking-wider mb-2">
+                {dict.about.founderBadge}
+              </h2>
+              <h3 className="text-4xl font-bold text-white mb-6">
+                {dict.about.founderTitle}
+              </h3>
+              <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 mb-8 backdrop-blur-sm">
+                <h4 className="text-2xl font-bold text-blue-300">{dict.about.founderName}</h4>
+                <p className="text-slate-400 font-medium">{dict.about.founderRole}</p>
+              </div>
+              <p className="text-slate-300 leading-relaxed text-lg italic">
+                "{dict.about.founderBio}"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* Core Values */}
       <section className="py-24 bg-white border-y border-slate-100 ">

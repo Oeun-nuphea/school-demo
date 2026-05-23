@@ -68,6 +68,11 @@
     "historyTitle": "A Legacy of Excellence",
     "historyP1": "Established in 1995, Asian Institute of Cambodia University began as a small institute for computer sciences. Today, we are a multidisciplinary powerhouse recognized globally for our rigorous curriculum and groundbreaking research.",
     "historyP2": "Our vision is to empower individuals to become creative problem solvers and leaders who can navigate and shape the complexities of the modern world.",
+    "founderBadge": "Our Leadership",
+    "founderTitle": "Meet Our Founder",
+    "founderName": "Dr. Rotha Khoeun",
+    "founderRole": "Founder & President",
+    "founderBio": "Dr. Rotha founded the Asian Institute of Cambodia in 1995 with a visionary goal: to bridge the technology gap in Southeast Asia. A former tech pioneer in Silicon Valley, he returned to Cambodia to establish an institution that would nurture the next generation of global innovators. Under his leadership, AIC has grown into a premier hub for technology and business education.",
     "valuesTitle": "Institutional Values",
     "values": {
       "innovation": { "title": "Innovation", "desc": "Pushing the boundaries of knowledge through research." },
