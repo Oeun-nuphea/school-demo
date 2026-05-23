@@ -1,4 +1,5 @@
 import { getDictionary } from "@/dictionaries/getDictionary";
+import Link from "next/link";
 
 export default async function Programs({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
   const { locale } = await params;
@@ -41,33 +42,15 @@ export default async function Programs({ params }: { params: Promise<{ locale: '
               <h3 className="text-2xl font-bold text-slate-900 mb-3">{program.data.title}</h3>
               <p className="text-slate-600 leading-relaxed mb-8">{program.data.desc}</p>
               
-              {/* Curriculum Accordion */}
+              {/* Curriculum Link */}
               {'curriculum' in program.data && (
-                <details className="group border border-slate-100 rounded-2xl bg-slate-50 overflow-hidden">
-                  <summary className="flex justify-between items-center font-semibold cursor-pointer p-5 select-none hover:bg-slate-100 transition-colors text-slate-800 outline-none">
-                    {dict.home.programs.viewCurriculum}
-                    <svg className="w-5 h-5 transition-transform group-open:rotate-180 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                  </summary>
-                  <div className="p-6 border-t border-slate-100 bg-white">
-                    <div className="space-y-8">
-                      {(program.data.curriculum as any[]).map((year, yIdx) => (
-                        <div key={yIdx}>
-                          <h4 className="font-bold text-blue-600 mb-4">{year.year}</h4>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                              <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">{dict.programs.semester1}</span>
-                              <p className="text-sm text-slate-700 leading-relaxed">{year.sem1}</p>
-                            </div>
-                            <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                              <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">{dict.programs.semester2}</span>
-                              <p className="text-sm text-slate-700 leading-relaxed">{year.sem2}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </details>
+                <Link
+                  href={`/${locale}/programs/${program.key}`}
+                  className="inline-flex items-center gap-2 font-bold text-blue-600 hover:text-blue-700 transition-colors group"
+                >
+                  {dict.home.programs.viewCurriculum}
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
               )}
             </div>
           ))}
