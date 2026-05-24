@@ -45,7 +45,8 @@ export default function Footer() {
               <li><Link href={`/${locale}/admissions`} className="hover:text-blue-600">{dict.footer.admissions}</Link></li>
               <li><Link href={`/${locale}/scholarships`} className="hover:text-blue-600">{dict.footer.scholarships}</Link></li>
               <li><Link href={`/${locale}/lecture`} className="hover:text-blue-600">{dict.navbar.lecture}</Link></li>
-              <li><Link href={`/${locale}/news`} className="hover:text-blue-600">{dict.footer.news}</Link></li>
+              <li><Link href={`/${locale}/blog`} className="hover:text-blue-600">{dict.navbar.blog}</Link></li>
+              <li><Link href={`/${locale}/events`} className="hover:text-blue-600">{dict.navbar.events}</Link></li>
             </ul>
           </div>
 

@@ -27,6 +27,8 @@ export default function Navbar() {
     { name: dict.navbar.alumni, href: `/${locale}/alumni` },
     { name: dict.navbar.achievements, href: `/${locale}/achievements` },
     { name: dict.navbar.lecture, href: `/${locale}/lecture` },
+    { name: dict.navbar.blog, href: `/${locale}/blog` },
+    { name: dict.navbar.events, href: `/${locale}/events` },
   ];
 
   const toggleLanguage = () => {
@@ -57,14 +59,14 @@ export default function Navbar() {
           </Link>
 
           {/* Nav Links */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden xl:flex items-center">
             {navLinks.map((link, i) => {
               const isActive = pathname === link.href || pathname?.startsWith(link.href + "/");
               return (
                 <Link
                   key={i}
                   href={link.href}
-                  className={`relative px-4 py-1.5 text-sm font-medium transition-colors rounded-full ${
+                  className={`relative px-2 xl:px-3 py-1.5 text-[13px] xl:text-sm font-medium transition-colors rounded-full ${
                     isActive
                       ? "text-slate-900 bg-slate-100"
                       : "text-slate-500 hover:text-slate-900 hover:bg-slate-50"
@@ -122,7 +124,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Toggle Button */}
             <button 
-              className="lg:hidden p-2 ml-1 text-slate-600 hover:bg-slate-100 rounded-full transition-colors"
+              className="xl:hidden p-2 ml-1 text-slate-600 hover:bg-slate-100 rounded-full transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -139,7 +141,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Expandable Container */}
-      <div className={`lg:hidden transition-[max-height] duration-300 ease-in-out ${isMobileMenuOpen ? "max-h-96" : "max-h-0"} overflow-y-auto border-t border-slate-100`}>
+      <div className={`xl:hidden transition-[max-height] duration-300 ease-in-out ${isMobileMenuOpen ? "max-h-[80vh]" : "max-h-0"} overflow-y-auto border-t border-slate-100`}>
         <div className="px-6 py-4 flex flex-col gap-2">
           {navLinks.map((link, i) => {
             const isActive = pathname === link.href || pathname?.startsWith(link.href + "/");
