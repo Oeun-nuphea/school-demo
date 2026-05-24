@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 bg-white/80 backdrop-blur-2xl border border-slate-200 shadow-lg shadow-slate-900/5 rounded-full transition-all duration-300">
       <div className="px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
 
           {/* Logo */}
           <Link href={`/${locale}`} className="flex-shrink-0 flex items-center gap-2.5 group">
