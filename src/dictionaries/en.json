@@ -5,6 +5,7 @@
     "scholarships": "Scholarships",
     "faculty": "Faculty",
     "alumni": "Alumni",
+    "achievements": "Achievements",
     "contact": "Contact",
     "apply": "Apply Now"
   },
@@ -185,6 +186,33 @@
       "dara": { "name": "Dara Kim", "role": "Product Manager at Amazon", "desc": "Learning to bridge the gap between engineering and business strategy was incredible. The professors here truly understand industry demands." },
       "nita": { "name": "Nita Meas", "role": "AI Researcher at OpenAI", "desc": "The depth of the machine learning curriculum is world-class. It gave me the mathematical foundation and practical coding skills to succeed globally." },
       "piseth": { "name": "Piseth Vong", "role": "CTO at Wing Bank", "desc": "Leadership and technical architecture were taught side-by-side. I recommend this institution to anyone serious about a long-term career in tech." }
+    }
+  },
+  "achievements": {
+    "headerTitle": "Our Achievements",
+    "headerSubtitle": "Celebrating decades of excellence, innovation, and global recognition in education and research.",
+    "listTitle": "Notable Milestones & Awards",
+    "items": {
+      "rankings": {
+        "title": "Top 10 in Tech Education",
+        "date": "2025",
+        "desc": "Ranked among the top 10 universities in Southeast Asia for Technology and Engineering programs."
+      },
+      "research": {
+        "title": "Global Innovation Award",
+        "date": "2024",
+        "desc": "Recognized by the World Tech Consortium for groundbreaking research in AI and Sustainable Energy."
+      },
+      "employability": {
+        "title": "#1 for Graduate Employability",
+        "date": "2023",
+        "desc": "Achieved the highest graduate employment rate in the region, with 98% of students finding jobs within 3 months."
+      },
+      "sustainability": {
+        "title": "Green Campus Initiative",
+        "date": "2022",
+        "desc": "Awarded the Platinum Certification for eco-friendly campus design and sustainable energy usage."
+      }
     }
   }
 }
