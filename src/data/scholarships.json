@@ -1,0 +1,54 @@
+{
+  "en": [
+    {
+      "id": "merit",
+      "title": "Presidential Merit Scholarship",
+      "amount": "100% Tuition Coverage",
+      "desc": "Awarded to top-tier applicants with exceptional academic records and leadership potential."
+    },
+    {
+      "id": "women",
+      "title": "Women in Technology Grant",
+      "amount": "50% Tuition + $2,000 Stipend",
+      "desc": "Designed to support and encourage outstanding female students pursuing STEM degrees."
+    },
+    {
+      "id": "innovator",
+      "title": "Global Innovator Award",
+      "amount": "$5,000 per Year",
+      "desc": "For students who have demonstrated remarkable innovative thinking or created impactful projects."
+    },
+    {
+      "id": "need",
+      "title": "Need-Based Opportunity Grant",
+      "amount": "Up to 80% Tuition",
+      "desc": "Financial assistance for brilliant students from disadvantaged backgrounds to ensure equal opportunity."
+    }
+  ],
+  "km": [
+    {
+      "id": "merit",
+      "title": "អាហារូបករណ៍សិស្សពូកែថ្នាក់ប្រធានាធិបតី",
+      "amount": "រ៉ាប់រងថ្លៃសិក្សា ១០០%",
+      "desc": "ផ្តល់ជូនបេក្ខជនឆ្នើមដែលមានកំណត់ត្រាសិក្សាល្អបំផុត និងសក្តានុពលភាពជាអ្នកដឹកនាំ។"
+    },
+    {
+      "id": "women",
+      "title": "អាហារូបករណ៍ស្ត្រីក្នុងវិស័យបច្ចេកវិទ្យា",
+      "amount": "៥០% ថ្លៃសិក្សា + ប្រាក់ឧបត្ថម្ភ ២០០០ ដុល្លារ",
+      "desc": "រចនាឡើងដើម្បីគាំទ្រ និងលើកទឹកចិត្តនិស្សិតស្ត្រីឆ្នើមដែលបន្តការសិក្សាលើជំនាញ STEM។"
+    },
+    {
+      "id": "innovator",
+      "title": "ពានរង្វាន់អ្នកច្នៃប្រឌិតសកល",
+      "amount": "៥០០០ ដុល្លារ ក្នុងមួយឆ្នាំ",
+      "desc": "សម្រាប់និស្សិតដែលបានបង្ហាញពីការគិតប្រកបដោយភាពច្នៃប្រឌិតគួរឱ្យកត់សម្គាល់ ឬបង្កើតគម្រោងដែលមានឥទ្ធិពល។"
+    },
+    {
+      "id": "need",
+      "title": "អាហារូបករណ៍ជំនួយកង្វះខាត",
+      "amount": "រហូតដល់ ៨០% នៃថ្លៃសិក្សា",
+      "desc": "ជំនួយហិរញ្ញវត្ថុសម្រាប់និស្សិតឆ្លាតវៃមកពីគ្រួសារខ្វះខាត ដើម្បីធានាបាននូវឱកាសស្មើគ្នា។"
+    }
+  ]
+}

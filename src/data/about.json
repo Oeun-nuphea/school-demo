@@ -1,0 +1,50 @@
+{
+  "en": {
+    "historyP1": "Established in 1995, Asian Institute of Cambodia University began as a small institute for computer sciences. Today, we are a multidisciplinary powerhouse recognized globally for our rigorous curriculum and groundbreaking research.",
+    "historyP2": "Our vision is to empower individuals to become creative problem solvers and leaders who can navigate and shape the complexities of the modern world.",
+    "founderName": "Prof. Em Channa",
+    "founderRole": "Director",
+    "founderBio": "Professor Em Channa leads the Asian Institute of Cambodia with a vision to cultivate Morality, Intelligence, Innovation, and Entrepreneurship. Under his guidance, AIC prepares the next generation of global leaders.",
+    "values": [
+      {
+        "id": "innovation",
+        "title": "Innovation",
+        "desc": "Pushing the boundaries of knowledge through research."
+      },
+      {
+        "id": "integrity",
+        "title": "Integrity",
+        "desc": "Upholding the highest ethical standards in academia."
+      },
+      {
+        "id": "inclusivity",
+        "title": "Inclusivity",
+        "desc": "Fostering a diverse and welcoming community."
+      }
+    ]
+  },
+  "km": {
+    "historyP1": "បង្កើតឡើងក្នុងឆ្នាំ 1995 វិទ្យាស្ថានអាស៊ីកម្ពុជាបានចាប់ផ្តើមជាវិទ្យាស្ថានតូចមួយសម្រាប់វិទ្យាសាស្ត្រកុំព្យូទ័រ។ សព្វថ្ងៃនេះ យើងគឺជាមជ្ឈមណ្ឌលពហុជំនាញដែលត្រូវបានទទួលស្គាល់ទូទាំងពិភពលោកសម្រាប់កម្មវិធីសិក្សាដ៏តឹងរ៉ឹង និងការស្រាវជ្រាវឈានមុខគេរបស់យើង។",
+    "historyP2": "ចក្ខុវិស័យរបស់យើងគឺផ្តល់អំណាចដល់បុគ្គលម្នាក់ៗឱ្យក្លាយជាអ្នកដោះស្រាយបញ្ហាប្រកបដោយភាពច្នៃប្រឌិត និងជាអ្នកដឹកនាំដែលអាចរុករក និងរៀបចំភាពស្មុគស្មាញនៃពិភពលោកទំនើប។",
+    "founderName": "លោកសាស្រ្តាចារ្យ ឯម ចាន់ណា",
+    "founderRole": "នាយកវិទ្យាស្ថាន",
+    "founderBio": "លោកសាស្រ្តាចារ្យ ឯម ចាន់ណា ដឹកនាំវិទ្យាស្ថានអាស៊ីកម្ពុជាដោយមានចក្ខុវិស័យក្នុងការបណ្តុះបណ្តាល សីលធម៌ បញ្ញា នវានុវត្តន៍ និងសហគ្រិនភាព។ រាល់កម្មវិធីសិក្សាត្រូវបានរៀបចំឡើងដើម្បីអនាគតនិស្សិត និងសង្គមជាតិ។",
+    "values": [
+      {
+        "id": "innovation",
+        "title": "ការច្នៃប្រឌិត",
+        "desc": "ជំរុញព្រំដែននៃចំណេះដឹងតាមរយៈការស្រាវជ្រាវ។"
+      },
+      {
+        "id": "integrity",
+        "title": "ភាពស្មោះត្រង់",
+        "desc": "រក្សាស្តង់ដារសីលធម៌ខ្ពស់បំផុតក្នុងការសិក្សា។"
+      },
+      {
+        "id": "inclusivity",
+        "title": "បរិយាបន្ន",
+        "desc": "ជំរុញសហគមន៍ចម្រុះ និងស្វាគមន៍។"
+      }
+    ]
+  }
+}

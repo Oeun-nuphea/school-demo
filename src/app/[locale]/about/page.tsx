@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { getDictionary } from "@/dictionaries/getDictionary";
+import { getAboutInfo } from "@/services/api";
 
 export default async function About({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const aboutInfo = await getAboutInfo(locale);
 
   return (
     <main className="flex min-h-screen flex-col bg-slate-50 font-sans">
@@ -34,10 +36,10 @@ export default async function About({ params }: { params: Promise<{ locale: 'en'
               {dict.about.historyTitle}
             </h3>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              {dict.about.historyP1}
+              {aboutInfo.historyP1}
             </p>
             <p className="text-slate-600 leading-relaxed">
-              {dict.about.historyP2}
+              {aboutInfo.historyP2}
             </p>
           </div>
           <div className="relative h-96 rounded-3xl overflow-hidden shadow-xl">
@@ -76,11 +78,11 @@ export default async function About({ params }: { params: Promise<{ locale: 'en'
                 {dict.about.founderTitle}
               </h3>
               <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50 mb-8 backdrop-blur-sm">
-                <h4 className="text-2xl font-bold text-blue-300">{dict.about.founderName}</h4>
-                <p className="text-slate-400 font-medium">{dict.about.founderRole}</p>
+                <h4 className="text-2xl font-bold text-blue-300">{aboutInfo.founderName}</h4>
+                <p className="text-slate-400 font-medium">{aboutInfo.founderRole}</p>
               </div>
               <p className="text-slate-300 leading-relaxed text-lg italic">
-                "{dict.about.founderBio}"
+                "{aboutInfo.founderBio}"
               </p>
             </div>
           </div>
@@ -96,20 +98,7 @@ export default async function About({ params }: { params: Promise<{ locale: 'en'
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: dict.about.values.innovation.title,
-                desc: dict.about.values.innovation.desc,
-              },
-              {
-                title: dict.about.values.integrity.title,
-                desc: dict.about.values.integrity.desc,
-              },
-              {
-                title: dict.about.values.inclusivity.title,
-                desc: dict.about.values.inclusivity.desc,
-              },
-            ].map((val, idx) => (
+            {aboutInfo.values.map((val: any, idx: number) => (
               <div
                 key={idx}
                 className="p-8 rounded-2xl bg-slate-50 border border-slate-100 text-center"

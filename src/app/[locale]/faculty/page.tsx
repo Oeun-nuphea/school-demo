@@ -1,9 +1,11 @@
 import { getDictionary } from "@/dictionaries/getDictionary";
+import { getLecturers } from "@/services/api";
 import Image from "next/image";
 
 export default async function Faculty({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const lecturersList = await getLecturers(locale);
 
   return (
     <main className="flex min-h-screen flex-col bg-slate-50 font-sans">
@@ -28,25 +30,21 @@ export default async function Faculty({ params }: { params: Promise<{ locale: 'e
           {dict.faculty.listTitle}
         </h2>
         <div className="grid md:grid-cols-3 gap-10">
-          {[
-            { data: dict.faculty.items.drChen, img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-            { data: dict.faculty.items.profSok, img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-            { data: dict.faculty.items.drPatel, img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-          ].map((lecturer, idx) => (
+          {lecturersList.map((lecturer: any, idx: number) => (
             <div key={idx} className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-slate-200/50 border border-slate-100 group">
               <div className="relative h-72 w-full overflow-hidden">
                 <Image
                   src={lecturer.img}
-                  alt={lecturer.data.name}
+                  alt={lecturer.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-1">{lecturer.data.name}</h3>
-                <p className="text-blue-600 font-semibold mb-4">{lecturer.data.role}</p>
-                <p className="text-slate-600 leading-relaxed">{lecturer.data.desc}</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-1">{lecturer.name}</h3>
+                <p className="text-blue-600 font-semibold mb-4">{lecturer.role}</p>
+                <p className="text-slate-600 leading-relaxed">{lecturer.desc}</p>
               </div>
             </div>
           ))}

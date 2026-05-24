@@ -59,24 +59,24 @@ export default function Navbar() {
           </Link>
 
           {/* Nav Links */}
-          <div className="hidden xl:flex items-center">
-            {navLinks.map((link, i) => {
-              const isActive = pathname === link.href || pathname?.startsWith(link.href + "/");
-              return (
-                <Link
-                  key={i}
-                  href={link.href}
-                  className={`relative px-2 xl:px-3 py-1.5 text-[13px] xl:text-sm font-medium transition-colors rounded-full ${
-                    isActive
-                      ? "text-slate-900 bg-slate-100"
-                      : "text-slate-500 hover:text-slate-900 hover:bg-slate-50"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-          </div>
+<div className="hidden xl:flex items-center">
+  {navLinks.map((link, i) => {
+    const isActive = pathname === link.href || pathname?.startsWith(link.href + "/");
+    return (
+      <Link
+        key={i}
+        href={link.href}
+        className={`relative px-2 xl:px-3 py-1.5 text-[13px] xl:text-sm font-medium transition-colors border-b-2 ${
+          isActive
+            ? "text-slate-900 font-bold border-slate-900"
+            : "text-slate-500 hover:text-slate-900 border-transparent hover:border-slate-300"
+        }`}
+      >
+        {link.name}
+      </Link>
+    );
+  })}
+</div>
 
           {/* Actions */}
           <div className="flex items-center gap-2 md:gap-3">

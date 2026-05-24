@@ -1,4 +1,5 @@
 import { getDictionary } from "@/dictionaries/getDictionary";
+import { getAchievements } from "@/services/api";
 
 const TrophyIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -34,6 +35,7 @@ const TrendingUpIcon = ({ className }: { className?: string }) => (
 export default async function Achievements({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const achievementsList = await getAchievements(locale);
 
   const icons = [TrophyIcon, AwardIcon, StarIcon, TrendingUpIcon];
 
@@ -62,13 +64,13 @@ export default async function Achievements({ params }: { params: Promise<{ local
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {Object.entries(dict.achievements.items).map(([key, data], idx) => {
+            {achievementsList.map((data: any, idx: number) => {
               const Icon = icons[idx % icons.length];
               return (
                 <div key={idx} className="group relative bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:border-blue-100 transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5 hover:-translate-y-1">
                   <div className="absolute top-8 right-8">
                     <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-bold">
-                      {(data as any).date}
+                      {data.date}
                     </span>
                   </div>
                   
@@ -76,9 +78,9 @@ export default async function Achievements({ params }: { params: Promise<{ local
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4">{(data as any).title}</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">{data.title}</h3>
                   <p className="text-slate-600 leading-relaxed text-lg">
-                    {(data as any).desc}
+                    {data.desc}
                   </p>
                 </div>
               );

@@ -1,9 +1,11 @@
 import { getDictionary } from "@/dictionaries/getDictionary";
+import { getAlumni } from "@/services/api";
 import Image from "next/image";
 
 export default async function Alumni({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const alumniList = await getAlumni(locale);
 
   return (
     <main className="flex min-h-screen flex-col bg-slate-50 font-sans">
@@ -36,11 +38,11 @@ export default async function Alumni({ params }: { params: Promise<{ locale: 'en
 
           {/* Row 1: Scrolling Left */}
           <div className="flex animate-marquee">
-            {[...Object.entries(dict.alumni.items).slice(0, 4), ...Object.entries(dict.alumni.items).slice(0, 4)].map(([key, data], idx) => (
+            {[...alumniList.slice(0, 4), ...alumniList.slice(0, 4)].map((data: any, idx) => (
               <div key={idx} className="bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-col w-[450px] shrink-0 mx-4">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 ring-4 ring-white">
-                    <Image src={`https://i.pravatar.cc/150?u=${key}`} alt={data.name} fill sizes="64px" className="object-cover" />
+                    <Image src={`https://i.pravatar.cc/150?u=${data.id}`} alt={data.name} fill sizes="64px" className="object-cover" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900">{data.name}</h3>
@@ -54,11 +56,11 @@ export default async function Alumni({ params }: { params: Promise<{ locale: 'en
 
           {/* Row 2: Scrolling Right */}
           <div className="flex animate-marquee-reverse">
-            {[...Object.entries(dict.alumni.items).slice(4, 8), ...Object.entries(dict.alumni.items).slice(4, 8)].map(([key, data], idx) => (
+            {[...alumniList.slice(4, 8), ...alumniList.slice(4, 8)].map((data: any, idx) => (
               <div key={idx} className="bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-col w-[450px] shrink-0 mx-4">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 ring-4 ring-white">
-                    <Image src={`https://i.pravatar.cc/150?u=${key}`} alt={data.name} fill sizes="64px" className="object-cover" />
+                    <Image src={`https://i.pravatar.cc/150?u=${data.id}`} alt={data.name} fill sizes="64px" className="object-cover" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900">{data.name}</h3>

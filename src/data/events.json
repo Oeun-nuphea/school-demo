@@ -1,0 +1,54 @@
+{
+  "en": [
+    {
+      "id": "e1",
+      "title": "Annual Hackathon 2026",
+      "date": "May 18-20, 2026",
+      "location": "Main Campus, Innovation Hub",
+      "desc": "Get ready for 48 hours of coding, pizza, and innovation. Over $10k in prizes available!",
+      "type": "Competition"
+    },
+    {
+      "id": "e2",
+      "title": "Tech Career Fair",
+      "date": "June 05, 2026",
+      "location": "Grand Auditorium",
+      "desc": "Connect with top tech companies including Google, Microsoft, and leading local startups.",
+      "type": "Career"
+    },
+    {
+      "id": "e3",
+      "title": "AI & Society Symposium",
+      "date": "July 12, 2026",
+      "location": "Virtual & Hall A",
+      "desc": "A panel discussion with global experts on the ethical implications of artificial general intelligence.",
+      "type": "Seminar"
+    }
+  ],
+  "km": [
+    {
+      "id": "e1",
+      "title": "ការប្រកួតសរសេរកូដប្រចាំឆ្នាំ 2026",
+      "date": "ថ្ងៃទី 18-20 ខែឧសភា ឆ្នាំ 2026",
+      "location": "សាខាធំ, មជ្ឈមណ្ឌលនវានុវត្តន៍",
+      "desc": "ត្រៀមខ្លួនសម្រាប់រយៈពេល 48 ម៉ោងនៃការសរសេរកូដ ភីហ្សា និងការច្នៃប្រឌិត។ រង្វាន់ដែលមានតម្លៃជាង $10k!",
+      "type": "ការប្រកួត"
+    },
+    {
+      "id": "e2",
+      "title": "ពិព័រណ៍ការងារបច្ចេកវិទ្យា",
+      "date": "ថ្ងៃទី 05 ខែមិថុនា ឆ្នាំ 2026",
+      "location": "សាលមហោស្រពធំ",
+      "desc": "ភ្ជាប់ទំនាក់ទំនងជាមួយក្រុមហ៊ុនបច្ចេកវិទ្យាកំពូលៗ រួមមាន Google, Microsoft និងក្រុមហ៊ុនចាប់ផ្តើមថ្មីៗក្នុងស្រុក។",
+      "type": "ការងារ"
+    },
+    {
+      "id": "e3",
+      "title": "សិក្ខាសាលា AI និងសង្គម",
+      "date": "ថ្ងៃទី 12 ខែកក្កដា ឆ្នាំ 2026",
+      "location": "អនឡាញ & សាល A",
+      "desc": "កិច្ចពិភាក្សាជាមួយអ្នកជំនាញទូទាំងពិភពលោកអំពីផលប៉ះពាល់ផ្នែកសីលធម៌នៃបញ្ញាសិប្បនិម្មិតទូទៅ។",
+      "type": "សិក្ខាសាលា"
+    }
+  ]
+}

@@ -1,40 +1,14 @@
 import { getDictionary } from "@/dictionaries/getDictionary";
 import Image from "next/image";
 
+import { getLecturers } from "@/services/api";
+
 export default async function LecturerInfo({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
 
   // We are enriching the existing faculty data with more detailed information for this dedicated profile page
-  const lecturersInfo = [
-    {
-      id: "drChen",
-      ...dict.faculty.items.drChen,
-      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      expertise: ["Artificial Intelligence", "Neural Networks", "AI Ethics", "Machine Learning"],
-      education: "Ph.D. in Computer Science, MIT",
-      publications: 42,
-      courses: ["CS-401 Deep Learning", "CS-505 AI Ethics & Policy"]
-    },
-    {
-      id: "profSok",
-      ...dict.faculty.items.profSok,
-      img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      expertise: ["Software Architecture", "Cloud Computing", "DevOps", "Microservices"],
-      education: "M.Sc. in Software Engineering, Stanford University",
-      publications: 18,
-      courses: ["SE-302 Advanced Web Dev", "SE-410 Cloud Architecture"]
-    },
-    {
-      id: "drPatel",
-      ...dict.faculty.items.drPatel,
-      img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      expertise: ["Cybersecurity", "Network Defense", "Ethical Hacking", "Cryptography"],
-      education: "Ph.D. in Information Security, Carnegie Mellon University",
-      publications: 35,
-      courses: ["CYB-200 Intro to Security", "CYB-450 Penetration Testing"]
-    }
-  ];
+  const lecturersInfo = await getLecturers(locale);
 
   return (
     <main className="flex min-h-screen flex-col bg-slate-50 font-sans">
@@ -59,7 +33,7 @@ export default async function LecturerInfo({ params }: { params: Promise<{ local
       {/* Detailed Lecturer Profiles */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="space-y-16">
-          {lecturersInfo.map((lecturer) => (
+          {lecturersInfo.map((lecturer: any) => (
             <div key={lecturer.id} className="bg-white rounded-[2rem] p-8 sm:p-12 shadow-xl shadow-slate-200/40 border border-slate-100 flex flex-col md:flex-row gap-12 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-50 to-transparent rounded-tr-[2rem] -z-0"></div>
               
@@ -111,7 +85,7 @@ export default async function LecturerInfo({ params }: { params: Promise<{ local
                       Areas of Expertise
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      {lecturer.expertise.map((item, idx) => (
+                      {lecturer.expertise.map((item: any, idx: number) => (
                         <span key={idx} className="px-3 py-1.5 bg-slate-100 text-slate-600 text-sm font-medium rounded-lg">
                           {item}
                         </span>
@@ -124,7 +98,7 @@ export default async function LecturerInfo({ params }: { params: Promise<{ local
                       Courses Taught
                     </h3>
                     <ul className="space-y-2">
-                      {lecturer.courses.map((course, idx) => (
+                      {lecturer.courses.map((course: any, idx: number) => (
                         <li key={idx} className="text-slate-600 text-sm flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:bg-blue-500 before:rounded-full">
                           {course}
                         </li>

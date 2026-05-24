@@ -1,0 +1,120 @@
+{
+  "en": [
+    {
+      "id": "drChen",
+      "name": "Dr. Sarah Chen",
+      "role": "Head of AI Research",
+      "desc": "Former Senior AI Researcher at Google. Specializes in Neural Networks and Ethics in AI.",
+      "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "expertise": [
+        "Artificial Intelligence",
+        "Neural Networks",
+        "AI Ethics",
+        "Machine Learning"
+      ],
+      "education": "Ph.D. in Computer Science, MIT",
+      "publications": 42,
+      "courses": [
+        "CS-401 Deep Learning",
+        "CS-505 AI Ethics & Policy"
+      ]
+    },
+    {
+      "id": "profSok",
+      "name": "Prof. Sok Visal",
+      "role": "Dean of Software Engineering",
+      "desc": "20+ years of enterprise software architecture experience. Passionate about DevOps and Scalable Systems.",
+      "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "expertise": [
+        "Software Architecture",
+        "Cloud Computing",
+        "DevOps",
+        "Microservices"
+      ],
+      "education": "M.Sc. in Software Engineering, Stanford University",
+      "publications": 18,
+      "courses": [
+        "SE-302 Advanced Web Dev",
+        "SE-410 Cloud Architecture"
+      ]
+    },
+    {
+      "id": "drPatel",
+      "name": "Dr. Rajesh Patel",
+      "role": "Cybersecurity Lead",
+      "desc": "Certified Ethical Hacker and former cybersecurity consultant for top-tier financial institutions.",
+      "img": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "expertise": [
+        "Cybersecurity",
+        "Network Defense",
+        "Ethical Hacking",
+        "Cryptography"
+      ],
+      "education": "Ph.D. in Information Security, Carnegie Mellon University",
+      "publications": 35,
+      "courses": [
+        "CYB-200 Intro to Security",
+        "CYB-450 Penetration Testing"
+      ]
+    }
+  ],
+  "km": [
+    {
+      "id": "drChen",
+      "name": "បណ្ឌិត សារ៉ា ឆេន",
+      "role": "ប្រធានផ្នែកស្រាវជ្រាវ AI",
+      "desc": "អតីតអ្នកស្រាវជ្រាវជាន់ខ្ពស់នៅ Google។ ឯកទេសផ្នែក Neural Networks និងសីលធម៌ក្នុងការប្រើប្រាស់ AI។",
+      "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "expertise": [
+        "បញ្ញាសិប្បនិម្មិត",
+        "បណ្តាញសរសៃប្រសាទ",
+        "សីលធម៌ AI",
+        "ការរៀនរបស់ម៉ាស៊ីន"
+      ],
+      "education": "បណ្ឌិតផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រ, MIT",
+      "publications": 42,
+      "courses": [
+        "CS-401 Deep Learning",
+        "CS-505 AI Ethics & Policy"
+      ]
+    },
+    {
+      "id": "profSok",
+      "name": "សាស្ត្រាចារ្យ សុខ វិសាល",
+      "role": "ព្រឹទ្ធបុរសផ្នែកវិស្វកម្មសូហ្វវែរ",
+      "desc": "មានបទពិសោធន៍ជាង ២០ឆ្នាំលើប្រព័ន្ធសូហ្វវែរសហគ្រាស។ ឯកទេសផ្នែក DevOps និង Scalable Systems។",
+      "img": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "expertise": [
+        "ស្ថាបត្យកម្មសូហ្វវែរ",
+        "Cloud Computing",
+        "DevOps",
+        "Microservices"
+      ],
+      "education": "អនុបណ្ឌិតផ្នែកវិស្វកម្មសូហ្វវែរ, សាកលវិទ្យាល័យ Stanford",
+      "publications": 18,
+      "courses": [
+        "SE-302 Advanced Web Dev",
+        "SE-410 Cloud Architecture"
+      ]
+    },
+    {
+      "id": "drPatel",
+      "name": "បណ្ឌិត រ៉ាជេស ប៉ាតេល",
+      "role": "ប្រធានផ្នែកសុវត្ថិភាពសាយប័រ",
+      "desc": "អ្នកជំនាញកូដសុវត្ថិភាព ដែលធ្លាប់បម្រើការជាអ្នកប្រឹក្សាសុវត្ថិភាពសាយប័រសម្រាប់ស្ថាប័នហិរញ្ញវត្ថុកំពូលៗ។",
+      "img": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "expertise": [
+        "សន្តិសុខបណ្តាញ",
+        "ការការពារបណ្តាញ",
+        "ការលួចចូលដោយស្របច្បាប់",
+        "ការអ៊ិនគ្រីប (Cryptography)"
+      ],
+      "education": "បណ្ឌិតផ្នែកសន្តិសុខព័ត៌មាន, សាកលវិទ្យាល័យ Carnegie Mellon",
+      "publications": 35,
+      "courses": [
+        "CYB-200 Intro to Security",
+        "CYB-450 Penetration Testing"
+      ]
+    }
+  ]
+}

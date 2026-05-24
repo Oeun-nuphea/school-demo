@@ -1,33 +1,13 @@
 import Link from "next/link";
 import { getDictionary } from "@/dictionaries/getDictionary";
 
+  import { getEvents } from "@/services/api";
+
 export default async function Events({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
 
-  const upcomingEvents = [
-    {
-      title: "Annual Hackathon 2026",
-      date: "May 18-20, 2026",
-      location: "Main Campus, Innovation Hub",
-      desc: "Get ready for 48 hours of coding, pizza, and innovation. Over $10k in prizes available!",
-      type: "Competition"
-    },
-    {
-      title: "Tech Career Fair",
-      date: "June 05, 2026",
-      location: "Grand Auditorium",
-      desc: "Connect with top tech companies including Google, Microsoft, and leading local startups.",
-      type: "Career"
-    },
-    {
-      title: "AI & Society Symposium",
-      date: "July 12, 2026",
-      location: "Virtual & Hall A",
-      desc: "A panel discussion with global experts on the ethical implications of artificial general intelligence.",
-      type: "Seminar"
-    }
-  ];
+  const upcomingEvents = await getEvents(locale);
 
   return (
     <main className="flex min-h-screen flex-col bg-slate-50 font-sans">
@@ -50,7 +30,7 @@ export default async function Events({ params }: { params: Promise<{ locale: 'en
 
       <section className="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="space-y-8">
-          {upcomingEvents.map((event, idx) => (
+          {upcomingEvents.map((event: any, idx: number) => (
             <div key={idx} className="bg-white border border-slate-200 rounded-[2rem] p-8 sm:p-10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-1/3 flex-shrink-0 bg-slate-50 rounded-2xl p-6 text-center border border-slate-100 flex flex-col justify-center">
                 <span className="text-blue-600 font-bold text-lg mb-2">{event.date}</span>
