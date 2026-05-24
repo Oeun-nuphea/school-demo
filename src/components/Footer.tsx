@@ -11,6 +11,10 @@ export default function Footer() {
   const locale = pathname?.startsWith("/km") ? "km" : "en";
   const dict = locale === "km" ? km : en;
 
+  if (pathname?.startsWith("/admin") || pathname?.startsWith("/lecturer") || pathname?.startsWith("/student")) {
+    return null;
+  }
+
   return (
     <footer className="bg-slate-50 border-t border-slate-200 pt-20 pb-10 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

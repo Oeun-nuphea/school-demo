@@ -10,9 +10,12 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Extract locale from pathname, default to 'en'
-  const locale = pathname.startsWith("/km") ? "km" : "en";
+  const locale = pathname?.startsWith("/km") ? "km" : "en";
   const dict = locale === "km" ? km : en;
+
+  if (pathname?.startsWith("/admin") || pathname?.startsWith("/lecturer") || pathname?.startsWith("/student")) {
+    return null;
+  }
 
   const navLinks = [
     { name: dict.navbar.about, href: `/${locale}/about` },

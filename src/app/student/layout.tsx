@@ -1,23 +1,48 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function StudentLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/student", label: "Dashboard", exact: true, icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+    )},
+    { href: "/student/records", label: "Academic Records", exact: false, icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+    )}
+  ];
+
   return (
-    <div className="min-h-screen bg-slate-100 flex pt-28">
+    <div className="min-h-screen bg-slate-100 flex">
       {/* Sidebar Navigation */}
-      <aside className="w-64 bg-white border-r border-slate-200 hidden md:block fixed h-[calc(100vh-80px)] overflow-y-auto z-40">
+      <aside className="w-64 bg-white border-r border-slate-200 hidden md:block fixed top-0 left-0 h-screen overflow-y-auto z-40 pb-4">
         <div className="p-6">
           <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Student Portal</h3>
           <nav className="space-y-2">
-            <a href="/student" className="flex items-center gap-3 px-4 py-2 hover:bg-slate-50 text-slate-600 rounded-lg font-medium transition-colors">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
-              Dashboard
-            </a>
-            <a href="/student/records" className="flex items-center gap-3 px-4 py-2 text-slate-600 hover:bg-slate-50 rounded-lg font-medium transition-colors">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-              Academic Records
-            </a>
+            {navLinks.map((link) => {
+              const isActive = link.exact ? pathname === link.href : pathname?.startsWith(link.href);
+              return (
+                <Link 
+                  key={link.href}
+                  href={link.href} 
+                  className={`flex items-center gap-3 px-4 py-2 rounded-lg font-medium transition-colors ${
+                    isActive 
+                      ? 'bg-blue-50 text-blue-600' 
+                      : 'text-slate-600 hover:bg-slate-50'
+                  }`}
+                >
+                  {link.icon}
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
       </aside>

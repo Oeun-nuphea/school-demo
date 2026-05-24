@@ -21,7 +21,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next, public assets)
-    "/((?!_next/static|_next/image|favicon.ico|logo.png|logo-transparent.png|hero.png).*)",
+    // Skip all internal paths (_next, public assets), and the portals
+    "/((?!_next/static|_next/image|favicon.ico|logo.png|logo-transparent.png|hero.png|admin|lecturer|student).*)",
   ],
 };
