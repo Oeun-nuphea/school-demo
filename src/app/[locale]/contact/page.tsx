@@ -1,4 +1,5 @@
 import { getDictionary } from "@/dictionaries/getDictionary";
+import FAQAccordion from "@/components/FAQAccordion";
 
 export default async function Contact({ params }: { params: Promise<{ locale: 'en' | 'km' }> }) {
   const { locale } = await params;
@@ -56,7 +57,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: 'e
                 </div>
                 <div>
                   <p className="text-sm text-slate-400 font-medium">Phone</p>
-                  <p className="text-slate-800">+855 23 880 009</p>
+                  <p className="text-slate-800">071 21 000 06 / 098 322 872 / 099 888 707 / 012 562 707</p>
                 </div>
               </div>
 
@@ -67,7 +68,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: 'e
                 </div>
                 <div>
                   <p className="text-sm text-slate-400 font-medium">General Enquiries</p>
-                  <p className="text-slate-800">info@aic.edu.kh</p>
+                  <p className="text-slate-800">sopheap4anha@gmail.com</p>
                 </div>
               </div>
 
@@ -78,7 +79,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: 'e
                 </div>
                 <div>
                   <p className="text-sm text-slate-400 font-medium">Admissions</p>
-                  <p className="text-slate-800">admissions@aic.edu.kh</p>
+                  <p className="text-slate-800">sopheap4anha@gmail.com</p>
                 </div>
               </div>
 
@@ -89,7 +90,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: 'e
                 </div>
                 <div>
                   <p className="text-sm text-slate-400 font-medium">Telegram</p>
-                  <p className="text-slate-800">@AICOfficial</p>
+                  <p className="text-slate-800">@AICOFFICIALCHANNEL</p>
                 </div>
               </div>
 
@@ -100,7 +101,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: 'e
                 </div>
                 <div>
                   <p className="text-sm text-slate-400 font-medium">Website</p>
-                  <p className="text-slate-800">www.aic.edu.kh</p>
+                  <p className="text-slate-800">www.aicambodia.com</p>
                 </div>
               </div>
             </div>
@@ -171,22 +172,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: 'e
           <h2 className="text-3xl font-bold text-center mb-10" style={{ color: '#1a237e' }}>
             Frequently Asked Questions
           </h2>
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <details 
-                key={idx} 
-                className="group w-full bg-[#fafafa] border border-slate-100 rounded-2xl overflow-hidden transition-all duration-300 open:shadow-md"
-              >
-                <summary className="w-full px-6 py-5 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition-colors list-none [&::-webkit-details-marker]:hidden">
-                  <span className="font-medium text-slate-800">{faq.question}</span>
-                  <svg className="w-5 h-5 text-slate-400 group-open:-rotate-180 transition-transform duration-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                </summary>
-                <div className="px-6 pb-5 pt-0 text-slate-600 leading-relaxed border-t border-slate-100/50 mt-1">
-                  {faq.answer}
-                </div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </div>
     </main>
