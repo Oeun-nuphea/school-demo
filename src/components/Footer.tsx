@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <Image src="/logo-transparent.png" alt="Asian Institute of Cambodia Logo" width={64} height={64} className="w-auto h-auto object-contain" />
+              <Image src="/logo-transparent.png" alt="Asian Institute of Cambodia Logo" width={64} height={64} className="object-contain" />
               <span className="font-bold text-xl text-slate-900">A.I.C</span>
             </div>
             <p className="text-slate-500 mb-6 text-sm">

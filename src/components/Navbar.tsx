@@ -51,7 +51,7 @@ export default function Navbar() {
               width={36}
               height={36}
               priority
-              className="w-auto h-auto object-contain drop-shadow-sm"
+              className="object-contain drop-shadow-sm"
             />
             <span className="font-extrabold text-lg tracking-tight hidden sm:block bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-600">
               A.E.I
