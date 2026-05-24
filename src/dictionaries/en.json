@@ -6,6 +6,7 @@
     "faculty": "Faculty",
     "alumni": "Alumni",
     "achievements": "Achievements",
+    "lecture": "Lecturers",
     "contact": "Contact",
     "apply": "Apply Now"
   },
@@ -212,6 +213,34 @@
         "title": "Green Campus Initiative",
         "date": "2022",
         "desc": "Awarded the Platinum Certification for eco-friendly campus design and sustainable energy usage."
+      }
+    }
+  },
+  "lecture": {
+    "headerTitle": "Open Lectures & Seminars",
+    "headerSubtitle": "Engage with thought leaders, industry experts, and pioneering researchers through our public lecture series.",
+    "upcomingTitle": "Upcoming Lectures",
+    "items": {
+      "aiFuture": {
+        "title": "The Future of General AI",
+        "speaker": "Dr. Sarah Chen",
+        "date": "November 15, 2026",
+        "type": "Guest Lecture",
+        "desc": "An exploration into the next decade of artificial intelligence, its ethical implications, and technological hurdles."
+      },
+      "quantum": {
+        "title": "Quantum Computing Fundamentals",
+        "speaker": "Prof. Sok Visal",
+        "date": "December 2, 2026",
+        "type": "Seminar",
+        "desc": "A beginner-friendly dive into how quantum mechanics is revolutionizing computation and cryptography."
+      },
+      "cyber": {
+        "title": "Modern Cyber Warfare",
+        "speaker": "Dr. Rajesh Patel",
+        "date": "October 10, 2026",
+        "type": "Workshop",
+        "desc": "Analyzing recent state-sponsored cyber attacks and the defensive strategies required for modern enterprises."
       }
     }
   }

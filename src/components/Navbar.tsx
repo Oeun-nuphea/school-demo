@@ -24,6 +24,7 @@ export default function Navbar() {
     { name: dict.navbar.faculty, href: `/${locale}/faculty` },
     { name: dict.navbar.alumni, href: `/${locale}/alumni` },
     { name: dict.navbar.achievements, href: `/${locale}/achievements` },
+    { name: dict.navbar.lecture, href: `/${locale}/lecture` },
   ];
 
   const toggleLanguage = () => {
