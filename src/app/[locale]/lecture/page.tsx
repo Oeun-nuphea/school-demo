@@ -60,7 +60,7 @@ export default async function LecturerInfo({ params }: { params: Promise<{ local
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="space-y-16">
           {lecturersInfo.map((lecturer) => (
-            <div key={lecturer.id} className="bg-white rounded-[2rem] p-8 sm:p-12 shadow-xl shadow-slate-200/40 border border-slate-100 flex flex-col md:flex-row gap-12 group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div key={lecturer.id} className="bg-white rounded-[2rem] p-8 sm:p-12 shadow-xl shadow-slate-200/40 border border-slate-100 flex flex-col md:flex-row gap-12 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-50 to-transparent rounded-tr-[2rem] -z-0"></div>
               
               {/* Profile Image & Quick Stats */}
@@ -70,7 +70,7 @@ export default async function LecturerInfo({ params }: { params: Promise<{ local
                     src={lecturer.img}
                     alt={lecturer.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
